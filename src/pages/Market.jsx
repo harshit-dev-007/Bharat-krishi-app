@@ -13,14 +13,37 @@ const Market = () => {
         { id: 3, crop: 'Cotton', variety: 'H-4', mandi: 'Rajkot Market', state: 'Gujarat', price: '₹6,150', change: '+0.5%', trend: 'up' },
         { id: 4, crop: 'Mustard', variety: 'Black', mandi: 'Bharatpur Mandi', state: 'Rajasthan', price: '₹5,400', change: '+2.1%', trend: 'up' },
         { id: 5, crop: 'Onion', variety: 'Red', mandi: 'Lasalgaon', state: 'Maharashtra', price: '₹1,200', change: '-5.0%', trend: 'down' },
-        { id: 6, crop: 'Rice', variety: 'Basmati 1121', mandi: 'Karnal Mandi', state: 'Haryana', price: '₹3,850', change: '+0.2%', trend: 'up' },
+        { id: 6, crop: 'Rice', variety: 'Basmati 1121', mandi: 'Karnal', state: 'Haryana', price: '₹3,850', change: '+0.2%', trend: 'up' },
+        { id: 7, crop: 'Sugarcane', variety: 'Co-0238', mandi: 'Muzaffarnagar', state: 'Uttar Pradesh', price: '₹350', change: '+0.0%', trend: 'up' },
+        { id: 8, crop: 'Paddy', variety: 'Common', mandi: 'Ludhiana', state: 'Punjab', price: '₹2,203', change: '+1.1%', trend: 'up' },
+        { id: 9, crop: 'Tea', variety: 'Assam CTC', mandi: 'Guwahati Auction', state: 'Assam', price: '₹18,500', change: '-1.2%', trend: 'down' },
+        { id: 10, crop: 'Jute', variety: 'TD-5', mandi: 'Kolkata', state: 'West Bengal', price: '₹5,050', change: '+0.8%', trend: 'up' },
+        { id: 11, crop: 'Coffee', variety: 'Arabica', mandi: 'Chikmagalur', state: 'Karnataka', price: '₹32,000', change: '+3.5%', trend: 'up' },
+        { id: 12, crop: 'Cardamom', variety: 'Alleppey Green', mandi: 'Vandanmedu', state: 'Kerala', price: '₹154,000', change: '-2.0%', trend: 'down' },
+        { id: 13, crop: 'Turmeric', variety: 'Salem', mandi: 'Erode', state: 'Tamil Nadu', price: '₹14,200', change: '+5.5%', trend: 'up' },
+        { id: 14, crop: 'Chilli', variety: 'Teja', mandi: 'Guntur', state: 'Andhra Pradesh', price: '₹22,000', change: '-0.5%', trend: 'down' },
+        { id: 15, crop: 'Maize', variety: 'Hybrid', mandi: 'Khagaria', state: 'Bihar', price: '₹2,100', change: '+1.0%', trend: 'up' },
+        { id: 16, crop: 'Paddy', variety: 'Grade A', mandi: 'Bargarh', state: 'Odisha', price: '₹2,203', change: '+0.0%', trend: 'up' },
+        { id: 17, crop: 'Tomato', variety: 'Hybrid', mandi: 'Madanapalle', state: 'Andhra Pradesh', price: '₹1,800', change: '-10.0%', trend: 'down' },
+        { id: 18, crop: 'Apple', variety: 'Royal Delicious', mandi: 'Shimla', state: 'Himachal Pradesh', price: '₹8,500', change: '+4.2%', trend: 'up' },
+        { id: 19, crop: 'Saffron', variety: 'Mongra', mandi: 'Pampore', state: 'Jammu and Kashmir', price: '₹300,000', change: '+1.5%', trend: 'up' },
+        { id: 20, crop: 'Bamboo', variety: 'Raw', mandi: 'Dimapur', state: 'Nagaland', price: '₹2,500', change: '+0.5%', trend: 'up' },
+        { id: 21, crop: 'Pineapple', variety: 'Kew', mandi: 'Agartala', state: 'Tripura', price: '₹3,200', change: '-1.0%', trend: 'down' }
     ];
 
     const filteredData = selectedState === 'All'
         ? marketData
         : marketData.filter(item => item.state === selectedState);
 
-    const states = ['All', 'Madhya Pradesh', 'Gujarat', 'Rajasthan', 'Maharashtra', 'Haryana'];
+    const states = [
+        'All', 'Andaman and Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam',
+        'Bihar', 'Chandigarh', 'Chhattisgarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi',
+        'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu and Kashmir', 'Jharkhand',
+        'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep', 'Madhya Pradesh', 'Maharashtra',
+        'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Puducherry', 'Punjab',
+        'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+        'Uttarakhand', 'West Bengal'
+    ];
 
     return (
         <div className="p-4 space-y-6 max-w-6xl mx-auto">
